@@ -40,7 +40,43 @@ namespace _05._11._2021
             }
 
             return sonuc;
-        }
 
+
+        }
+        public static List<int> bölenlerBirDahil(int sayı)
+        {
+            List<int> sonuc = new List<int>();
+            for (int i = 1; i < sayı; i++)
+            {
+                if (sayı % i == 0)
+                {
+                    sonuc.Add(i);
+                }
+
+            }
+            return sonuc;
+
+        }
+        public static bool mükemmelMi (int sayı)
+        {
+            bool sonuc = false;
+            int toplam= listeToplama(bölenlerBirDahil(sayı));
+            if (toplam==sayı)
+            {
+                sonuc = true;
+            }
+            return sonuc;
+        }
+        public static int mutlakAl(int sayı)
+        {
+            int sonuc = sayı;
+            if (sayı<0)
+            {
+                sonuc = sayı*(-1);
+            }
+            
+            return sonuc;
+
+        }
     }
 }
