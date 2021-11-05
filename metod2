@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _05._11._2021
+{
+    class Metodlarım
+    {
+        public static List<int> bölenler(int sayı)
+        {
+            List<int> sonuc = new List<int>();
+            for (int i = 2; i < sayı; i++)
+            {
+                if (sayı % i == 0)
+                {
+                    sonuc.Add(i);
+                }
+
+            }
+            return sonuc;
+
+        }
+        public static bool asalMı(int sayı)
+        {
+            bool sonuc = false;
+            if (bölenler(sayı).Count==0)
+            {
+                sonuc = true;
+            }
+            return sonuc;
+        }
+        public static int listeToplama(List<int> sayılar)
+        {
+            int sonuc = 0;
+            for (int i = 0; i < sayılar.Count; i++)
+            {
+                sonuc += sayılar[i];
+            }
+
+            return sonuc;
+        }
+
+    }
+}
